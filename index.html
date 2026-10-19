@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Приключения лягушки</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-shell">
+    <canvas id="game"></canvas>
+
+    <div class="hud">
+      <div class="hud__left">
+        <span id="score">Светлячки: 0 / 20</span>
+        <span id="zone">Локация: Королевство сладостей</span>
+      </div>
+
+      <div class="hud__right">
+        <span id="record">Рекорд: 0</span>
+        <button id="startBtn" type="button">Старт</button>
+        <button id="pauseBtn" type="button">Пауза</button>
+        <button id="restartBtn" type="button">Заново</button>
+        <button id="fullscreenBtn" type="button">Во весь экран</button>
+      </div>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <h2 id="overlayTitle">Приключения лягушки</h2>
+
+      <p id="overlayText">
+        Собери 20 светлячков и доберись до короны.<br><br>
+        Управление: ← → или A/D — движение.<br>
+        Space, W или ↑ — прыжок.<br>
+        Повторный прыжок в воздухе запрещён.<br><br>
+        Опасны: полицейские-бананы, тележка, вороны,<br>
+        жители облаков, сосульки и падение.
+      </p>
+
+      <button id="overlayBtn" type="button">Начать игру</button>
+    </div>
+
+    <div class="touch-controls" aria-label="Мобильное управление">
+      <div class="touch-group">
+        <button id="leftBtn" type="button" aria-label="Влево">◀</button>
+        <button id="rightBtn" type="button" aria-label="Вправо">▶</button>
+      </div>
+
+      <button id="jumpBtn" type="button" aria-label="Прыжок">Прыжок</button>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
